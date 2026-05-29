@@ -328,7 +328,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // STICKY HEADER & SCROLL SHADOW
     // ==========================================
-    const header = document.querySelector('.site-header');
     if (header) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {

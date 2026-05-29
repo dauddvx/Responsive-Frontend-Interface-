@@ -8,20 +8,20 @@
        1. COLOR SYSTEM
        ----------------------------- */
     /* Brand Colors */
-    --clr-primary: #A0D8EF;
-    --clr-primary-dark: #81c4e0; /* Hover state */
+    --clr-primary: #A0D4E0; /* Ethereal Blue - Trust */
+    --clr-primary-dark: #81b9c4; /* Hover state */
     
-    --clr-secondary: #A68F7B;
-    --clr-secondary-dark: #8c7865; /* Hover state */
+    --clr-secondary: #A5958F; /* Mocha Mousse - Stability */
+    --clr-secondary-dark: #8a7a74; /* Hover state */
     
     /* Backgrounds & Surfaces */
-    --clr-background: #F2F0EA;
+    --clr-background: #F2F0EA; /* Moonlit Grey - Refinement */
     --clr-surface: #FFFFFF;
     --clr-surface-muted: #EAE8E2;
     
     /* Typography Colors */
-    --clr-text-main: #1F2937;
-    --clr-text-muted: #4B5563;
+    --clr-text-main: #2C2A29; /* Warmer dark text */
+    --clr-text-muted: #5C5856;
     --clr-text-light: #9CA3AF;
     
     /* UI Borders */
@@ -30,7 +30,8 @@
     /* -----------------------------
        2. TYPOGRAPHY SYSTEM
        ----------------------------- */
-    --ff-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --ff-sans: 'Roboto', sans-serif;
+    --ff-heading: 'Inter', sans-serif;
     
     /* Fluid typography scale using clamp() for modern responsive scaling */
     --fs-xs: clamp(0.75rem, 0.71rem + 0.2vw, 0.875rem);
@@ -106,6 +107,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: var(--ff-heading);
     color: var(--clr-text-main);
     line-height: var(--lh-tight);
     font-weight: var(--fw-bold);
@@ -1515,14 +1517,134 @@ html {
     box-shadow: var(--shadow-sm);
 }
 
+/* ============================================================
+   NAVIGATION BAR & LOGO
+   ============================================================ */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md) var(--space-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-nav__brand a {
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-bold);
+    color: var(--clr-text-main);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.main-nav__brand a::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: var(--clr-primary);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.main-nav__toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+}
+
+.hamburger-icon {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--clr-text-main);
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-text-main);
+    transition: transform 0.3s ease;
+}
+
+.hamburger-icon::before { transform: translateY(-8px); }
+.hamburger-icon::after { transform: translateY(8px); }
+
+.main-nav__toggle[aria-expanded="true"] .hamburger-icon { background-color: transparent; }
+.main-nav__toggle[aria-expanded="true"] .hamburger-icon::before { transform: rotate(45deg); }
+.main-nav__toggle[aria-expanded="true"] .hamburger-icon::after { transform: rotate(-45deg); }
+
+.main-nav__list {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav__link {
+    color: var(--clr-text-main);
+    text-decoration: none;
+    font-weight: var(--fw-medium);
+    transition: color 0.3s ease;
+}
+
+.main-nav__link:hover {
+    color: var(--clr-primary);
+}
+
+/* Mobile Menu Overlay */
+@media (max-width: 767px) {
+    .main-nav {
+        padding: var(--space-md);
+    }
+    
+    .main-nav__toggle {
+        display: block;
+    }
+
+    .main-nav__list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--clr-surface);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-xl);
+        transform: translateY(-100%);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 999;
+    }
+
+    .main-nav__list.is-active {
+        transform: translateY(0);
+    }
+    
+    .main-nav__link {
+        font-size: var(--fs-xl);
+    }
+}
+
 /* 4. Intersection Observer Entrance Animations */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    /* Modern Performance Optimization: Skip rendering of offscreen content */
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 800px;
 }
 
 .reveal.is-visible {
