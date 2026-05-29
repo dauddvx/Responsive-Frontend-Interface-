@@ -1,0 +1,57 @@
+/* ============================================================
+   print.css — Print Stylesheet
+   Responsive Frontend Interface
+   ============================================================ */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .header,
+  .mobile-menu,
+  #scroll-progress,
+  #back-to-top,
+  #toast-container,
+  .hero__bg,
+  .hero__visual,
+  .carousel__controls,
+  .filter-bar,
+  .contact__socials,
+  .footer__socials,
+  .footer__newsletter,
+  .btn--primary,
+  .btn--secondary,
+  .modal-overlay {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  h1 { font-size: 24pt; }
+  h2 { font-size: 20pt; }
+  h3 { font-size: 16pt; }
+
+  a[href]::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.8em;
+  }
+
+  section {
+    page-break-inside: avoid;
+    padding-block: 1rem;
+  }
+
+  .container {
+    max-width: 100%;
+    padding-inline: 0;
+  }
+}

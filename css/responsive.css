@@ -1,0 +1,182 @@
+/* ============================================================
+   GLOBAL RESPONSIVE SETTINGS
+   ============================================================ */
+
+/* 1. Prevent Horizontal Scroll Globally */
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* 2. Responsive Images & Media */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto; /* Preserve aspect ratio */
+    object-fit: cover;
+}
+
+/* 3. Fluid Typography & Spacing (Using CSS clamp) 
+   Scales smoothly between 320px (Mobile) and 1024px+ (Desktop) */
+:root {
+    /* Base Font Size: 16px to 18px */
+    --fs-base: clamp(1rem, 0.9545rem + 0.2273vw, 1.125rem);
+    
+    /* Small text: 14px to 16px */
+    --fs-sm: clamp(0.875rem, 0.8295rem + 0.2273vw, 1rem);
+    
+    /* H1 (Hero): 36px to 64px */
+    --fs-4xl: clamp(2.25rem, 1.3409rem + 4.5455vw, 4rem);
+    
+    /* H2 (Section Titles): 28px to 48px */
+    --fs-3xl: clamp(1.75rem, 1.0909rem + 3.2955vw, 3rem);
+    
+    /* H3 (Card Titles): 24px to 32px */
+    --fs-2xl: clamp(1.5rem, 1.2273rem + 1.3636vw, 2rem);
+    
+    /* Large Text / Highlights: 20px to 24px */
+    --fs-xl: clamp(1.25rem, 1.1136rem + 0.6818vw, 1.5rem);
+    
+    /* Buttons / Nav: 16px to 18px */
+    --fs-lg: clamp(1rem, 0.9545rem + 0.2273vw, 1.125rem);
+    
+    /* Spacing System Fluid Adjustments */
+    --space-md: clamp(1rem, 0.8182rem + 0.9091vw, 1.5rem);
+    --space-lg: clamp(1.5rem, 1.3182rem + 0.9091vw, 2rem);
+    --space-xl: clamp(2rem, 1.6364rem + 1.8182vw, 3rem);
+    --space-2xl: clamp(2.5rem, 1.9545rem + 2.7273vw, 4rem);
+    --space-3xl: clamp(3rem, 2.0909rem + 4.5455vw, 5.5rem);
+}
+
+/* ============================================================
+   BREAKPOINTS
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   MOBILE (320px - 767px)
+   ------------------------------------------------------------ */
+@media (max-width: 767px) {
+    /* Ensure padding is sufficient but not overwhelming */
+    .container {
+        padding-inline: var(--space-md);
+    }
+    
+    /* Force 1 column on all grids for strict mobile view */
+    .features__grid,
+    .services__grid,
+    .statistics__grid,
+    .pricing__grid,
+    .contact__container,
+    .site-footer__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stack hero buttons */
+    .hero__actions {
+        flex-direction: column;
+        width: 100%;
+        gap: var(--space-md);
+    }
+    
+    .hero__actions .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+/* ------------------------------------------------------------
+   TABLET (768px - 1023px)
+   ------------------------------------------------------------ */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        padding-inline: var(--space-lg);
+    }
+
+    /* 2 Column Grids for Tablet */
+    .features__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .statistics__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .pricing__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Make the 3rd pricing card span 2 columns to keep layout centered and clean */
+    .pricing-card:nth-child(3) {
+        grid-column: span 2;
+        max-width: 60%;
+        margin-inline: auto;
+    }
+
+    .contact__container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .site-footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ------------------------------------------------------------
+   DESKTOP (1024px+)
+   ------------------------------------------------------------ */
+@media (min-width: 1024px) {
+    .container {
+        padding-inline: var(--space-xl);
+    }
+
+    /* 3 Column Grids */
+    .features__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .pricing__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Restore normal span for 3rd pricing card */
+    .pricing-card:nth-child(3) {
+        grid-column: span 1;
+        max-width: 100%;
+    }
+
+    /* 4 Column Grids */
+    .services__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .statistics__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Custom layout for Hero - Side by Side */
+    .hero__container {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        text-align: left;
+        gap: var(--space-3xl);
+    }
+
+    .hero__content {
+        margin-inline: 0;
+        align-items: flex-start;
+    }
+
+    .hero__actions {
+        justify-content: flex-start;
+    }
+
+    /* Custom Footer Grid */
+    .site-footer__grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+}

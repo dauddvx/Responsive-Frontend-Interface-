@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#A0D8EF">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="SaaS Platform | Automate Your Workflow">
+    <meta property="og:description" content="Automate and scale your business workflow with our premium SaaS platform.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.saasplatform.com">
+    <meta property="og:image" content="https://www.saasplatform.com/assets/images/og-image.webp">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SaaS Platform",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "19.00",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    
+    <!-- Preload Critical CSS -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/responsive.css" as="style">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link sr-only">Skip to main content</a>
+
+    <!-- =========================
+         HEADER & NAVBAR
+         ========================= -->
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Primary Navigation">
+            <div class="main-nav__brand">
+                <a href="/" aria-label="SaaS Platform Homepage">SaaSLogo</a>
+            </div>
+            
+            <button class="main-nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation menu">
+                <span class="hamburger-icon" aria-hidden="true"></span>
+            </button>
+            
+            <ul id="nav-menu" class="main-nav__list">
+                <li class="main-nav__item"><a href="#features" class="main-nav__link">Features</a></li>
+                <li class="main-nav__item"><a href="#services" class="main-nav__link">Services</a></li>
+                <li class="main-nav__item"><a href="#pricing" class="main-nav__link">Pricing</a></li>
+                <li class="main-nav__item"><a href="#contact" class="main-nav__link">Contact</a></li>
+                <li class="main-nav__item"><a href="#pricing" class="main-nav__cta btn btn--primary">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+    <main id="main-content">
+
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero" aria-labelledby="hero-title">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <span class="badge hero__badge">New Release 2.0</span>
+                    <h1 id="hero-title" class="hero__title">Automate Your Workflow, Seamlessly</h1>
+                    <p class="hero__description">
+                        Streamline your business operations with our AI-powered platform designed for teams that want to scale fast.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#pricing" class="btn btn--primary">Start Free Trial</a>
+                        <a href="#demo" class="btn btn--secondary">Book a Demo</a>
+                    </div>
+                </div>
+                <div class="hero__media">
+                    <!-- Loading eager and fetchpriority high as it is above the fold LCP element -->
+                    <img src="assets/images/hero-dashboard.webp" alt="Dashboard interface showing automated workflows and analytics" class="hero__image" loading="eager" fetchpriority="high" decoding="sync" width="800" height="600">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Features Section -->
+        <section id="features" class="features reveal" aria-labelledby="features-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="features-title" class="section-title">Powerful Features</h2>
+                    <p class="section-subtitle">Everything you need to manage your business efficiently.</p>
+                </header>
+                
+                <div class="features__grid">
+                    <article class="feature-card">
+                        <div class="feature-card__icon" aria-hidden="true">
+                            <span class="icon-automation">⚡</span>
+                        </div>
+                        <h3 class="feature-card__title">Smart Automation</h3>
+                        <p class="feature-card__description">Automate repetitive tasks with our drag-and-drop workflow builder. Save hours every week.</p>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-card__icon" aria-hidden="true">
+                            <span class="icon-analytics">📊</span>
+                        </div>
+                        <h3 class="feature-card__title">Real-time Analytics</h3>
+                        <p class="feature-card__description">Gain actionable insights with comprehensive, live data dashboards and custom reports.</p>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-card__icon" aria-hidden="true">
+                            <span class="icon-security">🔒</span>
+                        </div>
+                        <h3 class="feature-card__title">Enterprise Security</h3>
+                        <p class="feature-card__description">Bank-grade encryption ensuring your data is protected 24/7 with zero compromises.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-card__icon" aria-hidden="true">
+                            <span class="icon-collaboration">👥</span>
+                        </div>
+                        <h3 class="feature-card__title">Team Collaboration</h3>
+                        <p class="feature-card__description">Work seamlessly with your team in real-time. Share notes, assign tasks, and chat.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-card__icon" aria-hidden="true">
+                            <span class="icon-integration">🔗</span>
+                        </div>
+                        <h3 class="feature-card__title">100+ Integrations</h3>
+                        <p class="feature-card__description">Connect all your favorite tools natively. From Slack to Salesforce, we have you covered.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-card__icon" aria-hidden="true">
+                            <span class="icon-mobile">📱</span>
+                        </div>
+                        <h3 class="feature-card__title">Mobile Accessible</h3>
+                        <p class="feature-card__description">Manage your entire business on the go with our fully responsive mobile experience.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Services Section -->
+        <section id="services" class="services reveal" aria-labelledby="services-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="services-title" class="section-title">Our Core Services</h2>
+                    <p class="section-subtitle">Tailored solutions to help your business achieve maximum efficiency.</p>
+                </header>
+                
+                <div class="services__grid">
+                    <article class="service-card">
+                        <div class="service-card__media">
+                            <!-- Placeholder image styling handled by CSS surface-muted if image fails -->
+                            <img src="assets/images/service-1.webp" alt="Cloud Migration" loading="lazy" decoding="async" width="400" height="250">
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Cloud Migration</h3>
+                            <p class="service-card__description">Seamlessly transition your legacy systems to the cloud with zero downtime and full data integrity.</p>
+                            <a href="#contact" class="btn btn--outline service-card__btn">Learn More</a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__media">
+                            <img src="assets/images/service-2.webp" alt="Custom API Development" loading="lazy" decoding="async" width="400" height="250">
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">API Development</h3>
+                            <p class="service-card__description">Build robust, scalable APIs to connect your platform with third-party tools and extend functionality.</p>
+                            <a href="#contact" class="btn btn--outline service-card__btn">Learn More</a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__media">
+                            <img src="assets/images/service-3.webp" alt="Data Analytics" loading="lazy" decoding="async" width="400" height="250">
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Data Analytics</h3>
+                            <p class="service-card__description">Transform raw data into actionable business intelligence using our custom machine learning pipelines.</p>
+                            <a href="#contact" class="btn btn--outline service-card__btn">Learn More</a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card__media">
+                            <img src="assets/images/service-4.webp" alt="Dedicated Support" loading="lazy" decoding="async" width="400" height="250">
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Dedicated Support</h3>
+                            <p class="service-card__description">Get round-the-clock technical assistance and strategic guidance from our team of senior engineers.</p>
+                            <a href="#contact" class="btn btn--outline service-card__btn">Learn More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Statistics Section -->
+        <section id="statistics" class="statistics reveal" aria-label="Company Statistics">
+            <div class="container">
+                <div class="statistics__grid" id="counter-section">
+                    <article class="stat-item">
+                        <div class="stat-item__number-wrapper">
+                            <span class="stat-item__number counter" data-target="10000">0</span>
+                            <span class="stat-item__suffix">+</span>
+                        </div>
+                        <span class="stat-item__label">Global Clients</span>
+                    </article>
+                    <article class="stat-item">
+                        <div class="stat-item__number-wrapper">
+                            <span class="stat-item__number counter" data-target="1500">0</span>
+                            <span class="stat-item__suffix">+</span>
+                        </div>
+                        <span class="stat-item__label">Projects Completed</span>
+                    </article>
+                    <article class="stat-item">
+                        <div class="stat-item__number-wrapper">
+                            <span class="stat-item__number counter" data-target="900">0</span>
+                            <span class="stat-item__suffix">+</span>
+                        </div>
+                        <span class="stat-item__label">5-Star Reviews</span>
+                    </article>
+                    <article class="stat-item">
+                        <div class="stat-item__number-wrapper">
+                            <span class="stat-item__number counter" data-target="99">0</span>
+                            <span class="stat-item__suffix">%</span>
+                        </div>
+                        <span class="stat-item__label">Success Rate</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Testimonials Section -->
+        <section id="testimonials" class="testimonials reveal" aria-labelledby="testimonials-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="testimonials-title" class="section-title">Trusted by Teams Worldwide</h2>
+                    <p class="section-subtitle">See what our customers have to say about us.</p>
+                </header>
+                
+                <div class="testimonials__slider-container">
+                    <div class="testimonials__track" id="testimonial-track">
+                        <!-- Slide 1 -->
+                        <article class="testimonial-card">
+                            <blockquote class="testimonial-card__quote">
+                                "This platform completely revolutionized how our remote team collaborates and tracks goals. Highly recommended!"
+                            </blockquote>
+                            <footer class="testimonial-card__author">
+                                <img src="assets/images/avatar-1.webp" alt="Headshot of Jane Doe" class="testimonial-card__avatar" loading="lazy" decoding="async" width="56" height="56">
+                                <div class="testimonial-card__info">
+                                    <cite class="testimonial-card__name">Jane Doe</cite>
+                                    <span class="testimonial-card__role">CTO, TechStartup</span>
+                                </div>
+                            </footer>
+                        </article>
+                        
+                        <!-- Slide 2 -->
+                        <article class="testimonial-card">
+                            <blockquote class="testimonial-card__quote">
+                                "We saved over 20 hours a week in administrative work after switching. The ROI is absolutely incredible."
+                            </blockquote>
+                            <footer class="testimonial-card__author">
+                                <img src="assets/images/avatar-2.webp" alt="Headshot of John Smith" class="testimonial-card__avatar" loading="lazy" decoding="async" width="56" height="56">
+                                <div class="testimonial-card__info">
+                                    <cite class="testimonial-card__name">John Smith</cite>
+                                    <span class="testimonial-card__role">Operations Manager, Acme Corp</span>
+                                </div>
+                            </footer>
+                        </article>
+
+                        <!-- Slide 3 -->
+                        <article class="testimonial-card">
+                            <blockquote class="testimonial-card__quote">
+                                "The seamless integrations and intuitive interface made onboarding our entire department a breeze."
+                            </blockquote>
+                            <footer class="testimonial-card__author">
+                                <img src="assets/images/avatar-3.webp" alt="Headshot of Sarah Lee" class="testimonial-card__avatar" loading="lazy" decoding="async" width="56" height="56">
+                                <div class="testimonial-card__info">
+                                    <cite class="testimonial-card__name">Sarah Lee</cite>
+                                    <span class="testimonial-card__role">Product Lead, InnovateInc</span>
+                                </div>
+                            </footer>
+                        </article>
+                    </div>
+
+                    <!-- Slider Controls -->
+                    <div class="testimonials__controls">
+                        <button class="slider-btn slider-btn--prev" aria-label="Previous Testimonial" id="testi-prev">
+                            &larr;
+                        </button>
+                        <div class="slider-dots" id="testi-dots" aria-label="Testimonial Navigation">
+                            <!-- Dots generated by JS -->
+                        </div>
+                        <button class="slider-btn slider-btn--next" aria-label="Next Testimonial" id="testi-next">
+                            &rarr;
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Pricing Section -->
+        <section id="pricing" class="pricing reveal" aria-labelledby="pricing-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="pricing-title" class="section-title">Transparent Pricing</h2>
+                    <p class="section-subtitle">Choose the plan that fits your business needs perfectly.</p>
+                </header>
+                
+                <div class="pricing__grid">
+                    <!-- Basic Plan -->
+                    <article class="pricing-card">
+                        <h3 class="pricing-card__title">Basic</h3>
+                        <div class="pricing-card__price">
+                            <span class="currency">$</span>19<span class="period">/mo</span>
+                        </div>
+                        <p class="pricing-card__description">Perfect for small teams getting started.</p>
+                        <ul class="pricing-card__features" role="list">
+                            <li>Up to 5 Users</li>
+                            <li>Basic Analytics</li>
+                            <li>Standard Support</li>
+                            <li class="disabled">Custom Integrations</li>
+                        </ul>
+                        <a href="#checkout-basic" class="btn btn--outline pricing-card__btn">Choose Basic</a>
+                    </article>
+                    
+                    <!-- Pro Plan (Featured) -->
+                    <article class="pricing-card pricing-card--featured">
+                        <div class="pricing-card__badge">Most Popular</div>
+                        <h3 class="pricing-card__title">Pro</h3>
+                        <div class="pricing-card__price">
+                            <span class="currency">$</span>49<span class="period">/mo</span>
+                        </div>
+                        <p class="pricing-card__description">Ideal for growing businesses and teams.</p>
+                        <ul class="pricing-card__features" role="list">
+                            <li>Unlimited Users</li>
+                            <li>Advanced Analytics</li>
+                            <li>Priority Support</li>
+                            <li>Custom Integrations</li>
+                        </ul>
+                        <a href="#checkout-pro" class="btn btn--primary pricing-card__btn">Choose Pro</a>
+                    </article>
+                    
+                    <!-- Enterprise Plan -->
+                    <article class="pricing-card">
+                        <h3 class="pricing-card__title">Enterprise</h3>
+                        <div class="pricing-card__price">
+                            <span class="currency">Custom</span>
+                        </div>
+                        <p class="pricing-card__description">For large organizations with specific needs.</p>
+                        <ul class="pricing-card__features" role="list">
+                            <li>Dedicated Account Manager</li>
+                            <li>Custom API Integrations</li>
+                            <li>24/7 Phone Support</li>
+                            <li>On-premise Deployment</li>
+                        </ul>
+                        <a href="#contact" class="btn btn--outline pricing-card__btn">Contact Sales</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. FAQ Section -->
+        <section id="faq" class="faq reveal" aria-labelledby="faq-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="faq-title" class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Everything you need to know about the product and billing.</p>
+                </header>
+                
+                <div class="faq__list">
+                    <!-- Q1 -->
+                    <div class="faq-item">
+                        <h3 class="faq-item__question">
+                            <button aria-expanded="false" class="faq-item__toggle" aria-controls="faq-answer-1" id="faq-btn-1">
+                                What is the cancellation policy?
+                                <span class="faq-item__icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div class="faq-item__answer" id="faq-answer-1" role="region" aria-labelledby="faq-btn-1">
+                            <div class="faq-item__answer-inner">
+                                <p>You can cancel your subscription at any time without any hidden fees or penalties. You will retain access to your plan until the end of your current billing cycle.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Q2 -->
+                    <div class="faq-item">
+                        <h3 class="faq-item__question">
+                            <button aria-expanded="false" class="faq-item__toggle" aria-controls="faq-answer-2" id="faq-btn-2">
+                                Do you offer discounts for non-profits?
+                                <span class="faq-item__icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div class="faq-item__answer" id="faq-answer-2" role="region" aria-labelledby="faq-btn-2">
+                            <div class="faq-item__answer-inner">
+                                <p>Yes, we are proud to offer a 50% discount for registered 501(c)(3) non-profit organizations. Please contact our support team with your tax documents to verify your status.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="faq-item">
+                        <h3 class="faq-item__question">
+                            <button aria-expanded="false" class="faq-item__toggle" aria-controls="faq-answer-3" id="faq-btn-3">
+                                Can I change my plan later?
+                                <span class="faq-item__icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div class="faq-item__answer" id="faq-answer-3" role="region" aria-labelledby="faq-btn-3">
+                            <div class="faq-item__answer-inner">
+                                <p>Absolutely. You can upgrade or downgrade your plan at any time directly from your dashboard. Upgrades are prorated immediately, while downgrades take effect at the start of the next billing cycle.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="faq-item">
+                        <h3 class="faq-item__question">
+                            <button aria-expanded="false" class="faq-item__toggle" aria-controls="faq-answer-4" id="faq-btn-4">
+                                Is my data secure?
+                                <span class="faq-item__icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div class="faq-item__answer" id="faq-answer-4" role="region" aria-labelledby="faq-btn-4">
+                            <div class="faq-item__answer-inner">
+                                <p>We take security very seriously. All data is encrypted at rest and in transit using bank-grade AES-256 encryption. We also run regular third-party security audits to ensure your data remains safe.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="faq-item">
+                        <h3 class="faq-item__question">
+                            <button aria-expanded="false" class="faq-item__toggle" aria-controls="faq-answer-5" id="faq-btn-5">
+                                Do you provide onboarding support?
+                                <span class="faq-item__icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div class="faq-item__answer" id="faq-answer-5" role="region" aria-labelledby="faq-btn-5">
+                            <div class="faq-item__answer-inner">
+                                <p>Yes! All Pro and Enterprise plans include a dedicated onboarding session with our success team to ensure your business gets up and running smoothly within days.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Contact Section -->
+        <section id="contact" class="contact reveal" aria-labelledby="contact-title">
+            <div class="container contact__container">
+                <div class="contact__info">
+                    <h2 id="contact-title" class="section-title">Get in Touch</h2>
+                    <p class="contact__description">Have questions? Fill out the form and our team will get back to you within 24 hours.</p>
+                    <address class="contact__details">
+                        <p><strong>Email:</strong> <a href="mailto:support@saas.com">support@saas.com</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                        <p><strong>Address:</strong> 123 Business Ave, Suite 100, Tech City</p>
+                    </address>
+                </div>
+                
+                <div class="contact__form-wrapper">
+                    <form id="contact-form" class="form" novalidate>
+                        <!-- Form Success/Error Alert -->
+                        <div id="form-alert" class="form__alert" hidden role="alert" aria-live="polite"></div>
+
+                        <div class="form__group">
+                            <label for="name" class="form__label">Full Name <span aria-hidden="true">*</span></label>
+                            <input type="text" id="name" name="name" class="form__input" aria-required="true" autocomplete="name">
+                            <span class="form__error-text" id="name-error" hidden>Please enter your full name.</span>
+                        </div>
+                        
+                        <div class="form__row">
+                            <div class="form__group">
+                                <label for="email" class="form__label">Email Address <span aria-hidden="true">*</span></label>
+                                <input type="email" id="email" name="email" class="form__input" aria-required="true" autocomplete="email">
+                                <span class="form__error-text" id="email-error" hidden>Please enter a valid email address.</span>
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="phone" class="form__label">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form__input" autocomplete="tel">
+                                <span class="form__error-text" id="phone-error" hidden>Please enter a valid phone number.</span>
+                            </div>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="message" class="form__label">Message <span aria-hidden="true">*</span></label>
+                            <textarea id="message" name="message" class="form__textarea" rows="5" aria-required="true"></textarea>
+                            <span class="form__error-text" id="message-error" hidden>Please enter your message.</span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary form__submit" id="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loader" hidden>Sending...</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__grid">
+                <!-- Brand & Logo -->
+                <div class="site-footer__brand">
+                    <a href="/" class="site-footer__logo" aria-label="SaaS Platform Homepage">SaaSLogo</a>
+                    <p class="site-footer__description">Empowering businesses to scale efficiently with intelligent automation workflows and seamless integrations.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <nav class="footer-nav-col" aria-label="Quick Links">
+                    <h3 class="footer-nav-col__title">Quick Links</h3>
+                    <ul class="footer-nav-col__list" role="list">
+                        <li><a href="#features">Platform Features</a></li>
+                        <li><a href="#pricing">Pricing Plans</a></li>
+                        <li><a href="#testimonials">Customer Stories</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Services -->
+                <nav class="footer-nav-col" aria-label="Services Links">
+                    <h3 class="footer-nav-col__title">Services</h3>
+                    <ul class="footer-nav-col__list" role="list">
+                        <li><a href="#services">Cloud Migration</a></li>
+                        <li><a href="#services">API Development</a></li>
+                        <li><a href="#services">Data Analytics</a></li>
+                        <li><a href="#services">Dedicated Support</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Contact & Legal -->
+                <div class="footer-nav-col">
+                    <h3 class="footer-nav-col__title">Contact</h3>
+                    <ul class="footer-nav-col__list" role="list">
+                        <li><a href="mailto:support@saas.com">support@saas.com</a></li>
+                        <li><a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom: Copyright & Socials -->
+            <div class="site-footer__bottom">
+                <p class="site-footer__copyright">&copy; 2026 SaaSLogo Inc. All rights reserved.</p>
+                <div class="site-footer__socials" aria-label="Social Media Links">
+                    <a href="#twitter" aria-label="Twitter">Twitter</a>
+                    <a href="#linkedin" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#github" aria-label="GitHub">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
